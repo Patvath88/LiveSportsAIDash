@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: nba-ai-backend
+    env: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: ODDS_API_KEY
+        value: e11d4159145383afd3a188f99489969e
+
+  - type: web
+    name: nba-ai-frontend
+    env: node
+    plan: free
+    buildCommand: "cd frontend && npm install && npm run build"
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://nba-ai-backend.onrender.com
