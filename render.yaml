@@ -18,4 +18,3 @@ services:
     envVars:
       - key: VITE_API_URL
         value: https://nba-ai-backend.onrender.com
-1
