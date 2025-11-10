@@ -1,0 +1,312 @@
+/* frontend/src/components/Dashboard.css */
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.team img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.vs {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.odds {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.predict-button {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.predict-button:hover {
+  background: #1e40af;
+  transform: scale(1.03);
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 40px;
+}
+
+.error {
+  color: #dc2626;
+}
+/* frontend/src/components/Dashboard.css */
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #111827;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.team img {
+  width: 34px;
+  height: 34px;
+}
+
+.vs {
+  font-weight: 700;
+  color: #555;
+}
+
+.details {
+  font-size: 0.95rem;
+}
+
+.odds,
+.meta {
+  margin-top: 5px;
+}
+
+.predict-button {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.predict-button:hover {
+  background: #1e40af;
+  transform: scale(1.03);
+}
+
+/* ===== Modal ===== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  animation: slideIn 0.3s ease-in-out;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.save-btn {
+  background: #16a34a;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #15803d;
+}
+
+.close-btn {
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #b91c1c;
+}
+
+.highlight {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.edge-positive {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.edge-negative {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.prediction-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.prediction-table div {
+  padding: 6px 4px;
+  border-bottom: 1px solid #ddd;
+}
